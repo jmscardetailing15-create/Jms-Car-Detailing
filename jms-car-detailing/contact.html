@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - JMS Car Detailing</title>
+    <title>Contact Us - JMS Car Detailing | Newlands East, Durban</title>
+    <meta name="description" content="Contact JM's Car Detailing in Newlands East, Durban. Book your car detailing service today or request a quote.">
+    <meta property="og:title" content="Contact JM's Car Detailing - Book Your Service">
+    <meta property="og:description" content="Contact JM's Car Detailing in Newlands East, Durban. Book your car detailing service today or request a quote.">
+    <meta property="og:image" content="https://jms-car-detailing.vercel.app/images/contact.jpg">
+    <meta property="og:url" content="https://jms-car-detailing.vercel.app/contact.html">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -30,26 +36,50 @@
         <div class="container">
             <article id="main-col">
                 <h1 class="page-title">Contact Us</h1>
+                <p>Ready to restore your car's shine? Fill out the form below and we'll get back to you as soon as possible to schedule your detailing service. We offer flexible scheduling and can work around your busy life.</p>
 
                 <div class="contact-form">
-                    <form id="contactForm">
+                    <form id="contactForm" onsubmit="return validateForm()">
                         <div class="form-group">
-                            <label for="name">Name</label>
+                            <label for="name">Full Name *</label>
                             <input type="text" id="name" name="name" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="email">Email</label>
+                            <label for="email">Email Address *</label>
                             <input type="email" id="email" name="email" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="phone">Phone</label>
-                            <input type="tel" id="phone" name="phone">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="message">Message</label>
+                            <label for="vehicle">Vehicle Type</label>
+                            <select id="vehicle" name="vehicle">
+                                <option value="">Select your vehicle type</option>
+                                <option value="sedan">Sedan</option>
+                                <option value="hatchback">Hatchback</option>
+                                <option value="suv">SUV</option>
+                                <option value="truck">Truck</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="basic">Basic Exterior</option>
+                                <option value="premium">Premium Detail</option>
+                                <option value="full">Full Detail</option>
+                                <option value="other">Other/Not Sure</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
                             <textarea id="message" name="message" required></textarea>
                         </div>
 
@@ -61,14 +91,26 @@
             <aside id="sidebar">
                 <div class="dark">
                     <h3>Contact Information</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Detail Street, Auto City, AC 12345</p>
-                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Newlands East, Durban, South Africa</p>
+                    <p><i class="fas fa-phone"></i> +27 76 123 4567</p>
                     <p><i class="fas fa-envelope"></i> info@jmscardetailing.com</p>
                     <br>
                     <h3>Business Hours</h3>
                     <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
                     <p>Saturday: 9:00 AM - 4:00 PM</p>
                     <p>Sunday: Closed</p>
+                    <br>
+                    <h3>Service Area</h3>
+                    <p>We serve Newlands East and surrounding areas in Durban. Mobile detailing service available for an additional fee.</p>
+                </div>
+
+                <div class="dark" style="margin-top: 30px;">
+                    <h3>Why Book With Us?</h3>
+                    <p><i class="fas fa-check"></i> Quality guaranteed</p>
+                    <p><i class="fas fa-check"></i> Professional, certified team</p>
+                    <p><i class="fas fa-check"></i> Premium products</p>
+                    <p><i class="fas fa-check"></i> Convenient scheduling</p>
+                    <p><i class="fas fa-check"></i> Competitive pricing</p>
                 </div>
             </aside>
         </div>
@@ -76,23 +118,15 @@
 
     <footer>
         <div class="container">
-            <p>JMS Car Detailing &copy; 2023</p>
+            <p>JMS Car Detailing &copy; 2023 | Newlands East, Durban</p>
             <div class="social">
                 <a href="#"><i class="fab fa-facebook"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        // Contact form handling
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message. We will contact you shortly!');
-            this.reset();
-        });
-    </script>
 </body>
 </html>

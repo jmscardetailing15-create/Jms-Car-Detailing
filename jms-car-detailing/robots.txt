@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jms-car-detailiing.vercel.app/sitemap.xml
+Sitemap: https://jms-car-detailing.vercel.app/sitemap.xml
